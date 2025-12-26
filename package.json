@@ -1,0 +1,36 @@
+{
+  "name": "@fluxsave/sdk",
+  "version": "0.1.0",
+  "description": "FluxSave SDK for API key uploads and file management",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "fluxsave",
+    "sdk",
+    "storage",
+    "upload"
+  ],
+  "author": "FluxSave",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "typescript": "^5.9.2"
+  }
+}
