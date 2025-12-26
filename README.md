@@ -19,6 +19,8 @@ const client = new FluxsaveClient({
   baseUrl: 'http://localhost:3000',
   apiKey: 'fs_xxx',
   apiSecret: 'sk_xxx',
+  timeoutMs: 30000,
+  retry: { retries: 2, retryDelayMs: 400 },
 });
 
 const file = new File([blobData], 'photo.png', { type: 'image/png' });
@@ -55,6 +57,9 @@ const response = await client.uploadFile(file, { filename: 'photo.png' });
 - `deleteFile(fileId)`
 - `getMetrics()`
 - `buildFileUrl(fileId, options)`
+- `setTimeout(timeoutMs)`
+- `setRetry(options)`
+- `fileFromBuffer(buffer, filename, type?)`
 
 ## Auth
 
