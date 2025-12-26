@@ -2,6 +2,11 @@ name: Publish to npm
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish (updates package.json for this run)'
+        required: false
+        type: string
   push:
     tags:
       - 'v*'
@@ -23,6 +28,11 @@ jobs:
 
       - name: Install deps
         run: yarn install --frozen-lockfile
+
+      - name: Set version (manual runs)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.version != '' }}
+        run: |
+          npm version ${{ inputs.version }} --no-git-tag-version
 
       - name: Build
         run: yarn build
