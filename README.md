@@ -16,7 +16,7 @@ yarn add @fluxsave/sdk
 import { FluxsaveClient } from '@fluxsave/sdk';
 
 const client = new FluxsaveClient({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://fluxsaveapi.lutheralien.com',
   apiKey: 'fs_xxx',
   apiSecret: 'sk_xxx',
   timeoutMs: 30000,
@@ -37,7 +37,7 @@ import { FluxsaveClient } from '@fluxsave/sdk';
 import { readFile } from 'node:fs/promises';
 
 const client = new FluxsaveClient({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://fluxsaveapi.lutheralien.com',
   apiKey: process.env.FLUXSAVE_KEY!,
   apiSecret: process.env.FLUXSAVE_SECRET!,
 });
