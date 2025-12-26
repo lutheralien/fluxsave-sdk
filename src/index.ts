@@ -276,7 +276,18 @@ export class FluxsaveClient {
   }
 }
 
-export const fileFromBuffer = (buffer: ArrayBuffer | Uint8Array, filename: string, type = 'application/octet-stream') => {
-  const data = buffer instanceof Uint8Array ? buffer : new Uint8Array(buffer);
+const toUint8Array = (buffer: ArrayBuffer | Uint8Array) => {
+  if (buffer instanceof Uint8Array) {
+    return new Uint8Array(buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength));
+  }
+  return new Uint8Array(buffer);
+};
+
+export const fileFromBuffer = (
+  buffer: ArrayBuffer | Uint8Array,
+  filename: string,
+  type = 'application/octet-stream'
+) => {
+  const data = toUint8Array(buffer);
   return new Blob([data], { type });
 };
