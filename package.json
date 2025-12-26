@@ -1,6 +1,6 @@
 {
   "name": "@fluxsave/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "FluxSave SDK for API key uploads and file management",
   "type": "module",
   "main": "./dist/index.cjs",
