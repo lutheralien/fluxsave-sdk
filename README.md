@@ -6,8 +6,6 @@ JavaScript/TypeScript SDK for FluxSave. Supports API key + secret auth, file upl
 
 ```bash
 npm install @fluxsave/sdk
-# or
-yarn add @fluxsave/sdk
 ```
 
 ## Documentation
