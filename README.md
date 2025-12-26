@@ -12,6 +12,10 @@ npm install @fluxsave/sdk
 
 https://fluxsave-sdk-docs.vercel.app/
 
+## Repository
+
+https://github.com/lutheralien/fluxsave-sdk-node
+
 ## Usage
 
 ```ts

@@ -27,6 +27,14 @@
     "storage",
     "upload"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lutheralien/fluxsave-sdk-node.git"
+  },
+  "homepage": "https://fluxsave-sdk-docs.vercel.app/",
+  "bugs": {
+    "url": "https://github.com/lutheralien/fluxsave-sdk-node/issues"
+  },
   "author": "FluxSave",
   "license": "MIT",
   "devDependencies": {
